@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "home": "Home",
+    "releaseAgents": "Release Agents",
+    "concreteReleaseAgent": "Concrete Release Agent",
+    "highTemperatureReleaseAgent": "High Temperature Release Agent",
+    "carbonFiberReleaseAgent": "Carbon Fiber Release Agent",
+    "polyurethaneReleaseAgent": "Polyurethane Release Agent",
+    "cleaningProducts": "Cleaning products",
+    "cleaningAgent": "Cleaning Agent",
+    "printingCleaning": "Printing Cleaning",
+    "semiconductorCleaning": "Semiconductor Cleaning",
+    "ceramicFilterPlateCleaning": "Ceramic Filter Plate Cleaning Agent",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "project": "Project",
+    "distributor": "Distributor",
+    "learning": "Learning",
+    "partnerClients": "Partner Clients",
+    "productionBase": "Production Base",
+    "qualifcations": "Qualifcations"
+  },
+  "home": {
+    "title": "Home",
+    "description": "Home Description",
+    "productTitle": "Product Overview",
+    "productDescription": "Imported Raw Materials,Eco-Friendly, High Quality",
+    "projectTitle": "Project Case",
+    "projectDescription": "Project Across China and Asia",
+    "leadingIndustrialCleaningSolutions": "Leading Industrial Cleaning Solutions",
+    "leadingIndustrialCleaningSolutionsDescription": "Providing innovative solutions for global industry"
+  },
+  "common": {
+    "form": {
+      "confirm": "Confirm",
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "reset": "Reset",
+      "download": "Download",
+      "learnMore": "Learn More",
+      "viewProducts": "View Products"
+    }
+  },
+  "contact": {
+    "title": "Write Down Your Question",
+    "description": "Do you need samples, quotes,or the closest distributor?",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "form": {
+      "name": "*Your Name",
+      "email": "*E-mail",
+      "message": "Message Information:",
+      "products": "Products / services of interest",
+      "identity": "Identity",
+      "customized": "Customized solutions",
+      "other": "Other requirements/issues",
+      "traders": "Traders",
+      "procurement": "Procurement personnel"
+    },
+    "socialMedia": {
+      "facebook": "Facebook",
+      "youtube": "Youtube",
+      "whatsapp": "Whatsapp",
+      "wechat": "Wechat"
+    }
+  },
+  "project": {
+    "title": "Project Case",
+    "description": "Project Across China and Asia"
+  },
+  "distributor": {
+    "title": "Welcome to Become Yunzhu Distributor",
+    "description": "Win-win, grow together!"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "description": "About Us Description"
+  },
+  "productOverview": "Product Overview",
+  "productOverviewDescription": "Imported Raw Materials, Eco-Friendly, High Quality",
+  "projectShowcase": "Project Showcase",
+  "projectShowcaseDescription": "Project Across China and Asia",
+  "statistics": {
+    "yearsExperience": "20+",
+    "yearsExperienceText": "Years of Experience",
+    "productionBase": "2000+",
+    "productionBaseText": "Sq.M. Production Base",
+    "engineerTeam": "10+",
+    "engineerTeamText": "Senior Engineer Team",
+    "workers": "100+",
+    "workersText": "Workers"
+  },
+  "products": {
+    "concreteReleaseAgent": "Concrete Release Agent",
+    "model": "Model",
+    "applications": "Applications",
+    "property": "Property",
+    "more": "MORE"
+  },
+  "form": {
+    "consultationHotline": "Consultation Hotline:18922204566",
+    "chatNow": "Chat Now",
+    "products": "Products / services of interest",
+    "identity": "Identity",
+    "releaseAgents": "Release agents",
+    "cleaningProduct": "Cleaning product",
+    "customizedSolutions": "Customized solutions",
+    "otherRequirements": "Other requirements/issues",
+    "traders": "Traders",
+    "procurementPersonnel": "Procurement personnel"
+  },
+  "footer": {
+    "writeQuestion": "Write Down Your Question",
+    "needSamples": "Do you need samples, quotes,or the closest distributor?",
+    "yourName": "*Your Name",
+    "email": "*E-mail",
+    "messageInfo": "Message Information:",
+    "confirm": "Confirm",
+    "companyName": "Dongguan Yunzhun New Materials Co., Ltd. All Rights Reserved"
+  }
+} 

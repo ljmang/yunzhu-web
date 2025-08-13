@@ -1,0 +1,122 @@
+{
+    "nav": {
+        "home": "首页",
+        "releaseAgents": "释放剂",
+        "concreteReleaseAgent": "混凝土释放剂",
+        "highTemperatureReleaseAgent": "高温释放剂",
+        "carbonFiberReleaseAgent": "碳纤维释放剂",
+        "polyurethaneReleaseAgent": "聚氨酯释放剂",
+        "cleaningProducts": "清洁产品",
+        "cleaningAgent": "清洁剂",
+        "printingCleaning": "印刷清洁",
+        "semiconductorCleaning": "半导体清洁",
+        "ceramicFilterPlateCleaning": "陶瓷滤板清洁剂",
+        "aboutUs": "关于我们",
+        "contactUs": "联系我们",
+        "project": "项目",
+        "distributor": "经销商",
+        "learning": "学习",
+        "partnerClients": "合作伙伴",
+        "productionBase": "生产基地",
+        "qualifcations": "资质"
+    },
+    "home": {
+        "title": "首页",
+        "description": "首页描述",
+        "productTitle": "产品概览",
+        "productDescription": "进口原材料，环保，高品质",
+        "projectTitle": "项目案例",
+        "projectDescription": "项目遍布中国和亚洲",
+        "leadingIndustrialCleaningSolutions": "领先的工业清洁解决方案",
+        "leadingIndustrialCleaningSolutionsDescription": "为全球工业提供创新解决方案"
+    },
+    "common": {
+        "form": {
+            "confirm": "确认",
+            "cancel": "取消",
+            "submit": "提交",
+            "reset": "重置",
+            "download": "下载",
+            "learnMore": "了解更多",
+            "viewProducts": "查看产品"
+        }
+    },
+    "contact": {
+        "title": "写下你的问题",
+        "description": "你需要样品，报价，或者最近的经销商？",
+        "email": "邮箱",
+        "phone": "电话",
+        "address": "地址",
+        "form": {
+            "name": "*你的名字",
+            "email": "*邮箱",
+            "message": "消息信息:",
+            "products": "感兴趣的产品/服务",
+            "identity": "身份",
+            "customized": "定制解决方案",
+            "other": "其他要求/问题",
+            "traders": "经销商",
+            "procurement": "采购人员"
+        },
+        "socialMedia": {
+            "facebook": "Facebook",
+            "youtube": "优酷",
+            "whatsapp": "Whatsapp",
+            "wechat": "微信"
+        }
+    },
+    "project": {
+        "title": "项目案例",
+        "description": "项目遍布中国和亚洲"
+    },
+    "distributor": {
+        "title": "欢迎成为云筑经销商",
+        "description": "共赢，共成长！"
+    },
+    "aboutUs": {
+        "title": "关于我们",
+        "description": "关于我们描述"
+    },
+    "productOverview": "产品概览",
+    "productOverviewDescription": "进口原材料，环保，高品质",
+    "projectShowcase": "项目展示",
+    "projectShowcaseDescription": "项目遍布中国和亚洲",
+    "statistics": {
+        "yearsExperience": "20+",
+        "yearsExperienceText": "年经验",
+        "productionBase": "2000+",
+        "productionBaseText": "平方米生产基地",
+        "engineerTeam": "10+",
+        "engineerTeamText": "高级工程师团队",
+        "workers": "100+",
+        "workersText": "员工"
+    },
+    "products": {
+        "concreteReleaseAgent": "混凝土释放剂",
+        "model": "型号",
+        "applications": "应用",
+        "property": "特性",
+        "more": "更多"
+    },
+    "form": {
+        "consultationHotline": "咨询热线：18922204566",
+        "chatNow": "在线咨询",
+        "products": "感兴趣的产品/服务",
+        "identity": "身份",
+        "releaseAgents": "释放剂",
+        "cleaningProduct": "清洁产品",
+        "customizedSolutions": "定制解决方案",
+        "otherRequirements": "其他要求/问题",
+        "traders": "经销商",
+        "procurementPersonnel": "采购人员"
+    },
+    "footer": {
+        "writeQuestion": "写下你的问题",
+        "needSamples": "你需要样品，报价，或者最近的经销商？",
+        "yourName": "*你的名字",
+        "email": "*邮箱",
+        "messageInfo": "消息信息:",
+        "confirm": "确认",
+        "companyName": "东莞云筑新材料有限公司版权所有"
+    }
+}

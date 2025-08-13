@@ -1,6 +1,6 @@
 // Strapi API 配置
-const STRAPI_BASE_URL = 'http://localhost:1337/api'
-const STRAPI_MEDIA_URL = 'http://localhost:1337'
+const STRAPI_BASE_URL = 'https://admin.gdyunzhu.com/api'
+const STRAPI_MEDIA_URL = 'https://admin.gdyunzhu.com' 
 
 export const useStrapi = () => {
   // 通用方法：从直接的图片数据中获取URL
@@ -199,13 +199,13 @@ export const useStrapi = () => {
   }
 
   //获取视频列表
-  const getVideos = async () => {
+  const getVideos = async (pageSize = 10, page = 1, sort = 'createdAt:desc') => {
     try {
-      const response = await $fetch(`${STRAPI_BASE_URL}/videos?populate=*`)
-      return response.data || []
+      const response = await $fetch(`${STRAPI_BASE_URL}/videos?pagination[pageSize]=${pageSize}&pagination[page]=${page}&populate=*&sort=${sort}`)
+      return response
     } catch (error) {
       console.error('Error fetching videos:', error)
-      return []
+      return {data: [], meta: {pagination: {total: 0}}}
     }
   }
 

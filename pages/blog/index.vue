@@ -13,7 +13,7 @@
     <div class="p-4 lg:p-10 flex gap-10">
       <!-- 文章列表 -->
       <div class="flex-1">
-        <div v-if="blogsSafe.data.length" class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div v-if="blogsSafe.data.length" class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8">
           <div v-for="item in blogsSafe.data" :key="item.id" class="flex flex-col gap-2">
             <!-- 封面图 -->
             <img v-if="getStrapiImageUrl(item.attributes, 'cover')" :src="getStrapiImageUrl(item.attributes, 'cover')"

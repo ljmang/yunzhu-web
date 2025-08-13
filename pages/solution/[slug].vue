@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Solution-{{ slug }}</h1>
+    <h1>Solution-{{route.params.slug }}</h1>
   </div>
 </template>
 

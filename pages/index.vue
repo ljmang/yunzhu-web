@@ -141,32 +141,17 @@
     </div>
 
     <!-- 教学文章 -->
-    <div class="p-4 max-w-7xl mx-auto">
-      <div class="flex flex-col gap-4 my-8 max-w-2xl mx-auto text-center">
-        <h2 class="text-5xl font-bold text-green-800">Learning Hub</h2>
-        <p class="text-gray-400">
-          Stay updated with the latest industry insights and best practices.
-        </p>
-      </div>
-      <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-8">
-        <NuxtLink v-for="article in articles?.data && articles.data.length > 0
-          ? articles.data
-          : defaultArticles.data" :key="article.id" :to="`/blog/${article.attributes.slug}`"
-          class="flex flex-col bg-gray-100 hover:bg-gray-200 transition-all duration-300 hover:shadow-lg">
-          <img :src="getStrapiImageUrl(article.attributes, 'cover')" :alt="article.attributes.title"
-            class="object-cover" />
-          <div class="p-4">
-            <h3 class="text-green-800 hover:text-yellow-500 text-xl mb-2">
-              {{ article.attributes.title }}
-            </h3>
-            <p class="line-clamp-2 text-sm text-gray-400">
-              {{ article.attributes.summary }}
-            </p>
-          </div>
-        </NuxtLink>
-      </div>
-      <NuxtLink to="/blog" class="text-yellow-500 hover:text-yellow-600 py-4 block text-center">More Articles >
-      </NuxtLink>
+    <div class="p-10">
+      <ArticleList 
+        :articles="articles?.data && articles.data.length > 0 ? articles.data : defaultArticles.data"
+        title="Learning Hub"
+        subtitle="Stay updated with the latest industry insights and best practices."
+        variant="compact"
+        :max-count="3"
+        :show-more-link="true"
+        more-link-url="/blog"
+        more-link-text="More Articles >"
+      />
     </div>
     <div class="h-0.5 bg-gray-200"></div>
     <!-- CTA Section -->
@@ -283,7 +268,7 @@ const handleImageError = event => {
 }
 
 // 使用Strapi composable
-const { getCateProducts, getBlogs, getStrapiImageUrl } = useStrapi()
+const { getCateProducts, getBlogs } = useStrapi()
 
 //加载分类
 const { data: cateProduct } = await useAsyncData('cateProduct', () =>

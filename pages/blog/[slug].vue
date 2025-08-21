@@ -74,20 +74,25 @@
     </div>
   </div>
 
-  <!-- 加载中 -->
+  <!-- Loading -->
   <div v-else-if="loading" class="max-w-4xl mx-auto py-10 px-4">
-    <div class="text-center">
-      <p>Loading...</p>
-    </div>
+    <LoadingSpinner text="Loading article..." />
   </div>
 
-  <!-- 博客未找到 -->
+  <!-- Blog not found -->
   <div v-else class="max-w-4xl mx-auto py-10 px-4">
-    <div class="text-center">
-      <h1 class="text-2xl font-bold mb-4">Blog Not Found</h1>
-      <p class="text-gray-600 mb-6">The blog post you're looking for doesn't exist.</p>
-      <NuxtLink to="/blog" class="text-green-800 hover:text-yellow-500"> Back to Blog </NuxtLink>
-    </div>
+    <ErrorState 
+      title="Article Not Found" 
+      description="Sorry, the article you're looking for doesn't exist or has been removed."
+      icon="mdi:file-document-outline"
+      :show-retry="false"
+    >
+      <template #action>
+        <NuxtLink to="/blog" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+          Back to Blog
+        </NuxtLink>
+      </template>
+    </ErrorState>
   </div>
 </template>
 

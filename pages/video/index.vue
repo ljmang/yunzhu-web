@@ -33,18 +33,19 @@
             </p>
           </div>
         </div>
-        <!-- 暂无文章 -->
-        <div v-else class="w-full text-center py-20">
-          <div class="text-gray-500">
-            <Icon name="mdi:file-search-outline" class="w-16 h-16 mb-4" />
-            <p class="text-xl mb-2">No videos</p>
-            <p class="text-sm">There are no videos available yet.</p>
-          </div>
+        <!-- No videos -->
+        <div v-else>
+          <EmptyState 
+            title="No Videos" 
+            description="There are no videos available yet. Please check back later."
+            icon="mdi:video-outline"
+          />
         </div>
         <!-- 分页 -->
         <div class="mt-8" v-if="videosSafe.meta?.pagination?.total > (videosSafe.data?.length || 0)">
           <button @click="loadMoreVideos" class="text-green-800 hover:text-yellow-500" :disabled="loading">
-            {{ loading ? 'Loading...' : 'Load More Videos......' }}
+            <LoadingSpinner v-if="loading" spinner-class="w-4 h-4" container-class="inline-flex items-center" />
+            <span v-else>Load More Videos......</span>
           </button>
         </div>
       </div>

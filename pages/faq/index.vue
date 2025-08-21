@@ -13,8 +13,17 @@
 
     <!-- 内容区加 loading/error 包裹 -->
     <div class="max-w-7xl mx-auto py-10 px-4">
-      <div v-if="loading" class="text-center py-10">加载中...</div>
-      <div v-else-if="error" class="text-center text-red-500 py-10">{{ error }}</div>
+      <div v-if="loading" class="py-10">
+        <LoadingSpinner text="Loading FAQs..." />
+      </div>
+      <div v-else-if="error" class="py-10">
+        <ErrorState 
+          title="Loading Failed" 
+          description="Unable to load FAQs. Please try again later."
+          :error="error"
+          @retry="fetchFaqs"
+        />
+      </div>
       <div v-else>
         <!-- 搜索框 -->
         <!-- <div class="mb-8">

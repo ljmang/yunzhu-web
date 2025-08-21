@@ -14,37 +14,21 @@
       <!-- 文章列表 -->
       <div class="flex-1">
         <div v-if="blogsSafe.data.length" class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8">
-          <div v-for="item in blogsSafe.data" :key="item.id" class="flex flex-col gap-2">
-            <!-- 封面图 -->
-            <img v-if="getStrapiImageUrl(item.attributes, 'cover')" :src="getStrapiImageUrl(item.attributes, 'cover')"
-              :alt="item.attributes.title" class="w-160 h-80 object-cover" />
-            <!-- 标题 -->
-            <h2 class="text-2xl">
-              <NuxtLink :to="`/blog/${item.attributes.slug}`" class="text-green-800 hover:text-yellow-500">
-                {{ item.attributes.title }}
-              </NuxtLink>
-            </h2>
-            <!-- 摘要 -->
-            <p class="text-gray-400 text-sm">{{ item.attributes.summary }}</p>
-            <!-- 日期 -->
-            <p class="text-xs text-gray-400 flex items-center">
-              <Icon name="mdi:calendar" class="w-4 h-4 mr-2" />
-              {{ formatDate(item.attributes.createdAt) }}
-            </p>
-          </div>
+          <ArticleCard v-for="article in blogsSafe.data" :key="article.id" :article="article" />
         </div>
-        <!-- 暂无文章 -->
-        <div v-else class="w-full text-center py-20">
-          <div class="text-gray-500">
-            <Icon name="mdi:file-search-outline" class="w-16 h-16 mb-4" />
-            <p class="text-xl mb-2">No articles</p>
-            <p class="text-sm">There are no articles available yet.</p>
-          </div>
+        <!-- No articles -->
+        <div v-else>
+          <EmptyState 
+            title="No Articles" 
+            description="There are no articles available yet. Please check back later."
+            icon="mdi:file-search-outline"
+          />
         </div>
         <!-- 分页 -->
         <div class="mt-8" v-if="blogsSafe.meta?.pagination?.total > blogsSafe.data.length">
           <button @click="loadMoreArticles" class="text-green-800 hover:text-yellow-500" :disabled="loading">
-            {{ loading ? 'Loading...' : 'Load More Articles......' }}
+            <LoadingSpinner v-if="loading" spinner-class="w-4 h-4" container-class="inline-flex items-center" />
+            <span v-else>Load More Articles......</span>
           </button>
         </div>
       </div>
@@ -65,7 +49,7 @@
 <script setup>
 import { computed, ref, onMounted } from 'vue'
 
-const { getBlogs, getCateProducts, getStrapiImageUrl } = useStrapi()
+const { getBlogs, getCateProducts } = useStrapi()
 
 // 分页状态
 const currentPage = ref(1)

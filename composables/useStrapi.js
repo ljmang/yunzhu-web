@@ -21,6 +21,36 @@ export const useStrapi = () => {
     return `${STRAPI_MEDIA_URL}${imageUrl}`
   }
 
+  // 通用方法：获取多张图片URL（数组形式）
+  const getStrapiImagesUrl = (imageArray, fallbackUrl = null) => {
+    if (!imageArray || !Array.isArray(imageArray)) {
+      return fallbackUrl
+    }
+    
+    // 返回图片URL数组
+    return imageArray.map(item => {
+      const imageUrl = item?.attributes?.url
+      if (!imageUrl) {
+        return fallbackUrl
+      }
+      return `${STRAPI_MEDIA_URL}${imageUrl}`
+    }).filter(url => url !== fallbackUrl)
+  }
+
+  // 通用方法：获取单张图片URL（从数组中取第一个）
+  const getStrapiImageFromArray = (imageArray, index = 0, fallbackUrl = null) => {
+    if (!imageArray || !Array.isArray(imageArray) || !imageArray[index]) {
+      return fallbackUrl
+    }
+    
+    const imageUrl = imageArray[index]?.attributes?.url
+    if (!imageUrl) {
+      return fallbackUrl
+    }
+    
+    return `${STRAPI_MEDIA_URL}${imageUrl}`
+  }
+
   // 获取产品分类
   const getCateProducts = async () => {
     try {
@@ -154,6 +184,18 @@ export const useStrapi = () => {
     }
   }
 
+  //服务流程
+  const getServiceProcess = async () => {
+    try {
+      const response = await $fetch(`${STRAPI_BASE_URL}/service-process?populate=*`)
+      return response.data.attributes || null
+    }
+    catch (error) {
+      console.error('Error fetching service process:', error)
+      return null
+    }
+  }
+
   // 获取解决方案列表
   const getSolutions = async () => {
     try {
@@ -217,8 +259,11 @@ export const useStrapi = () => {
     getProducts,
     getProduct,
     getStrapiImageUrl,
+    getStrapiImagesUrl,
+    getStrapiImageFromArray,
     getDirectImageUrl,
     getAboutUs,
+    getServiceProcess,
     getHome,
     getSolutions,
     getSolution,

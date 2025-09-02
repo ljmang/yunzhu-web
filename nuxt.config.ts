@@ -5,16 +5,26 @@ export default defineNuxtConfig({
     port: 3002
   },
   nitro: {
-    preset: 'static',
+    preset: 'node-server',
     prerender: {
-      // 暂时禁用预渲染以避免 API 调用问题
-      routes: [],
+      // 启用预渲染
+      routes: [
+        '/',
+        '/about-us',
+        '/contact-us',
+        '/blog',
+        '/product',
+        '/solution',
+        '/video',
+        '/faq',
+        '/thankyou'
+      ],
       // 忽略动态路由
       ignore: ['/admin', '/api'],
       // 失败时继续
       failOnError: false,
       // 自动发现链接
-      crawlLinks: false,
+      crawlLinks: true,
     },
   },
   compatibilityDate: '2025-05-15',

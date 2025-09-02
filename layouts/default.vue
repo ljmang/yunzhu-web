@@ -497,7 +497,6 @@ const handleFormSubmit = async event => {
   }
 }
 </script>
-
 <style scoped>
 /* 仅保留导航下拉菜单、移动端菜单动画等必要样式 */
 .nav-child-item {
@@ -590,3 +589,4 @@ const handleFormSubmit = async event => {
   transform: scale(0.9);
 }
 </style>
+

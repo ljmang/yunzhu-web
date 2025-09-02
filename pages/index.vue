@@ -29,6 +29,7 @@
         <img src="/image/home/product.webp" alt="Industrial Background" class="object-cover h-120 w-120 display-none" />
       </div>
     </section>
+    
     <!-- 我们的优势 -->
     <div class="p-4 max-w-7xl mx-auto">
       <div class="flex flex-col text-center gap-4 my-8 max-w-2xl mx-auto">
